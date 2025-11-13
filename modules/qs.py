@@ -44,8 +44,8 @@ def search_tweets(client, query, max_results=10):
 # response = search_tweets(tweepy_client, "api", max_results=5)
 # print(response)
 
-reply = submit_comment(tweepy_client, "This is a test comment! 🤖", "1988232973817442450")
-print(reply)
+# reply = submit_comment(tweepy_client, "This is a test comment! 🤖", "1988232973817442450")
+# print(reply)
 # try:
 #     print("Searching for tweets with 'api' keyword...")
     

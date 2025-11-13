@@ -42,7 +42,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'kermitx.urls'
+ROOT_URLCONF = 'kermit.urls'
 
 TEMPLATES = [
     {
@@ -61,14 +61,14 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'kermitx.wsgi.application'
+WSGI_APPLICATION = 'kermit.wsgi.application'
 
 # Database
 
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        "NAME": os.environ.get("POSTGRES_DB", "kermitx_db"),
+        "NAME": os.environ.get("POSTGRES_DB", "kermit_db"),
         "USER": os.environ.get("POSTGRES_USER", "postgres"),
         "PASSWORD": os.environ.get("POSTGRES_PASSWORD", "123"),
         "HOST": os.environ.get("POSTGRES_HOST", "localhost"),

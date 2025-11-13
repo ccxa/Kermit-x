@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 
 def main():
     """Run administrative tasks."""
-    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'kermitx.settings')
+    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'kermit.settings')
     load_dotenv()
 
     try:
