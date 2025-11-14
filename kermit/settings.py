@@ -17,9 +17,11 @@ ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", "127.0.0.1").split(",")
 CORS_ORIGIN_ALLOW_ALL = True
 CORS_ALLOW_CREDENTIALS = False
 CSRF_TRUSTED_ORIGINS = os.getenv("CSRF_TRUSTED_ORIGINS", "").split(",")
-CSRF_COOKIE_SECURE = True
 
-SESSION_COOKIE_SECURE = True
+# Security settings - should be True in production with HTTPS
+# Set to False for local development over HTTP
+CSRF_COOKIE_SECURE = os.getenv('CSRF_COOKIE_SECURE', 'False') == 'True'
+SESSION_COOKIE_SECURE = os.getenv('SESSION_COOKIE_SECURE', 'False') == 'True'
 
 # Application definition
 
@@ -30,6 +32,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'applications.common.apps.CommonConfig',
+    'applications.crawler.apps.CrawlerConfig',
 ]
 
 MIDDLEWARE = [
